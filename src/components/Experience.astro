@@ -1,0 +1,39 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Octubre 2022 -Actualmente...",
+    title: "Web3 and Fullstack Developer",
+    company: "Evolution Systems B.V.",
+    description:
+      `Software development, research and development, support and bug fixing, source code management, and documentation.
+      Server installation and maintenance.
+      Contribute to the development of a Dapp that serves as a bridge for the exchange of cryptocurrencies such as XRP, ETH, BSC, SOLANA, AVAX, among others, with its respective administrative panel for the visualisation of statistics, transactions, bridge statuses, among others.
+      Implemented a PWA for the exchange, sale, and purchase of NFTs to and from other marketplaces on the XRP Ledger network.
+      Developed an administrative dashboard for transaction verification, process management, offers, and payments.
+      Implemented a PWA for p2p betting on the XRP Ledger network and developed an administrative panel for payment verification and user transactions.`,
+    link: "https://twitch.tv/midudev",
+  },
+  {
+    date: "Septiembre 2019 - Octubre 2022",
+    title: "Fullstack Developer",
+    company: "Sistemas Sabios SAS",
+    description:
+      `Software development, support and bug fixing, source code management, and documentation.
+      Collaborated on the implementation and maintenance of a desktop and mobile wallet based on the Cryptocurrency Casinocoin and Crazy8Token.
+      Created a library for internal project management with an administrative panel for user and transaction verification.
+      Implemented a PWA using blockchain powered by CasinoCoin to verify and store casino spins and bets in real-time on the XRP Ledger network (TrustTracker™).`,
+    // link: "https://twitch.tv/midudev",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
