@@ -1,20 +1,50 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
+import GitHub from "./icons/GitHub.astro";
+import AngularIcon from "./icons/Angular.astro";
+import NestIcon from "./icons/Nest.astro";
+import XRPLIcon from "./icons/Xrpl.astro";
+import EthereumIcon from "./icons/Ethereum.astro";
+import SolanaIcon from "./icons/Solana.astro";
+import IonicIcon from "./icons/Ionic.astro";
+import TelegramIcon from "./icons/Telegram.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#7b15fc] text-white",
+    icon: AngularIcon
   },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
+  NESTJS:{
+    name: "Nestjs",
+    class: "bg-[#e1224e] text-white",
+    icon: NestIcon
+  },
+  XRPL: {
+    name: "XRPL",
+    class: "bg-white text-black",
+    icon: XRPLIcon
+  },
+  WEB3:{
+    name: "Web3",
+    class: "bg-[#81a9fa] text-white",
+    icon: EthereumIcon
+  },
+  SOLANA:{
+    name: "Solana",
+    class: "bg-[#14F195] text-black",
+    icon: SolanaIcon
+  },
+  IONIC:{
+    name: "Ionic",
+    class: "bg-white text-black",
+    icon: IonicIcon
+  },
+  TELEGRAM:{
+    name: "Telegram",
+    class: "bg-[#0084C9] text-white color-white",
+    icon: TelegramIcon
   },
 }
 const PROJECTS = [
@@ -22,9 +52,9 @@ const PROJECTS = [
     title: "PontiX - Bridge currency exchange",
     description:
       "Dapp that serves as a bridge for the exchange of cryptocurrencies such as XRP, ETH, BSC, SOLANA, AVAX, among others",
-    link: "https://onramp.pontix.io/",
+    link: "https://webapp.pontix.io/",
     image: "/projects/pontix.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.ANGULAR, TAGS.NESTJS, TAGS.WEB3, TAGS.XRPL, TAGS.SOLANA],
   },
   {
     title: "Non Fungible - Non Fungible NFT Viewer",
@@ -32,7 +62,7 @@ const PROJECTS = [
       "Non Fungible (NF) is a Xaman xApp to manage and interact with all aspects of XRP Ledger NFTs issued via the XLS-20 standard, regardless of issuer or marketplace.",
     link: "https://nftltd.im/",
     image: "/projects/non-fungible.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.IONIC, TAGS.NESTJS, TAGS.XRPL, TAGS.ANGULAR],
   },
   {
     title: "p2pbet - Friendly peer-to-peer bets on the XRPL",
@@ -40,7 +70,7 @@ const PROJECTS = [
       "Xaman Interactive xApp for betting, peer to peer on the XRPL blockchain",
     link: "https://xumm.app/detect/xapp:rnr.p2p",
     image: "/projects/p2pbet.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.IONIC, TAGS.TELEGRAM, TAGS.NESTJS, TAGS.XRPL, TAGS.SOLANA],
   },
   {
     title: "CasinoCoin Lobby ",
@@ -48,7 +78,7 @@ const PROJECTS = [
       "Xapp where users can join regulated gambling sites, almost instant deposits and withdrawals and exclusive offers.",
     link: "https://casinocoin.im/getting-started/",
     image: "/projects/casinocoin.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.IONIC, TAGS.NESTJS, TAGS.XRPL],
   },
 ]
 ---
@@ -58,8 +88,8 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, link }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+    <div class="relative flex flex-col items-center h-56 col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+      <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
