@@ -11,11 +11,15 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
+    "@astrojs/cloudflare": "^12.4.0",
     "@astrojs/tailwind": "6.0.2",
     "@fontsource-variable/onest": "5.0.2",
     "astro": "5.6.1",
     "astro-robots-txt": "1.0.0",
     "tailwindcss": "3.4.1",
     "typescript": "5.3.3"
+  },
+  "devDependencies": {
+    "wrangler": "^4.10.0"
   }
 }
