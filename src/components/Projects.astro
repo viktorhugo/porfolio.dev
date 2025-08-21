@@ -9,12 +9,29 @@ import IonicIcon from "./icons/Ionic.astro";
 import TelegramIcon from "./icons/Telegram.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Solidity from "./icons/Solidity.astro";
+import Wagmi from "./icons/Wagmi.astro";
+import Rainbowkit from "./icons/Rainbowkit.astro";
+import React from "./icons/React.astro";
+import Wallet from "./icons/Wallet.astro";
 
 const TAGS = {
   ANGULAR: {
     name: "Angular",
     class: "bg-[#7b15fc] text-white",
     icon: AngularIcon
+  },
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
   },
   NESTJS:{
     name: "Nestjs",
@@ -45,6 +62,36 @@ const TAGS = {
     name: "Telegram",
     class: "bg-[#0084C9] text-white color-white",
     icon: TelegramIcon
+  },
+  FOUNDRY:{
+    name: "Foundry",
+    class: "bg-[#1F2837] text-white color-white",
+    icon: Solidity
+  },
+  WAGMI:{
+    name: "Wagmi",
+    class: "bg-white text-black color-white",
+    icon: Wagmi
+  },
+  RAINBOWKIT:{
+    name: "Rainbowkit",
+    class: "bg-white text-black color-white",
+    icon: Rainbowkit
+  },
+  VIEM:{
+    name: "Viem",
+    class: "bg-[#1F2837] text-white color-white",
+    icon: null
+  },
+  REACT:{
+    name: "React",
+    class: "bg-white text-black",
+    icon: React
+  },
+  'EIP-6963':{
+    name: "EIP-6963",
+    class: "bg-white text-black color-[#81a9fa]",
+    icon: Wallet
   },
 }
 const PROJECTS = [
@@ -80,49 +127,97 @@ const PROJECTS = [
     image: "/projects/casinocoin.webp",
     tags: [TAGS.IONIC, TAGS.NESTJS, TAGS.XRPL],
   },
+  {
+    title: "NFT Marketplace",
+    description:
+      "This is a full-stack NFT marketplace project that includes smart contracts, a decentralized application (dApp), and an event indexer for a complete and efficient user experience.",
+    link: null,
+    image: "/projects/nft-marketplace.webp",
+    tags: [TAGS.NEXT, TAGS.FOUNDRY, TAGS.WAGMI, TAGS.VIEM, TAGS.RAINBOWKIT, TAGS.TAILWIND],
+    repository: "https://github.com/viktorhugo/NFT_Marketplace"
+  },
+  {
+    title: "Stable Coin",
+    description:
+      "This project is a full-stack decentralized finance (DeFi) application for a stablecoin. It features a robust smart contract backend built with Foundry for a decentralized stablecoin (DSC) and a modern Next.js frontend for user interaction.",
+    link: null,
+    image: "/projects/dsc.webp",
+    tags: [TAGS.NEXT, TAGS.FOUNDRY, TAGS.WAGMI, TAGS.VIEM, TAGS.RAINBOWKIT, TAGS.TAILWIND],
+    repository: "https://github.com/viktorhugo/full-stack-stable-coin"
+  },
+  {
+    title: "T-sender",
+    description:
+      "T-Sender UI is the frontend for the T-Sender Smart Contract, a tool designed for efficiently sending ERC20 tokens to multiple addresses in a single transaction (airdrop).",
+    link: null,
+    image: "/projects/t-sender.webp",
+    tags: [TAGS.NEXT, TAGS.FOUNDRY, TAGS.WAGMI, TAGS.VIEM, TAGS.RAINBOWKIT, TAGS.TAILWIND],
+    repository: "https://github.com/viktorhugo/t-sender-ui"
+  },
+  {
+    title: "Buy Me Coffee",
+    description:
+      `A modern full-stack application built with React Router, TypeScript, and modern development tools, designed to implement a "Buy Me a Coffee" DApp.`,
+    link: null,
+    image: "/projects/buy-me-coffe.webp",
+    tags: [TAGS.REACT, TAGS.VIEM, TAGS.TAILWIND, TAGS['EIP-6963'] ],
+    repository: "https://github.com/viktorhugo/buy-me-a-coffe-dapp"
+  },
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center h-56 col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+    PROJECTS.map(({ image, title, description, tags, link, repository }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center h-56 col-span-6 row-span-5 gap-8 transition duration-500 
+            ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 
+            md:group-hover:shadow-xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+          </div>
+        </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2 flex-wrap gap-4">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2 flex-wrap gap-4">
+                {tags.map((tag) => (
+                  <li>
+                    <span
+                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    >
+                      {tag.icon && <tag.icon class="size-4" />}
+                      {tag.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-        {link && (
-          <LinkButton href={link}>
-            <Link class="size-4" />
-            Preview
-          </LinkButton>
-        )}
-      </footer>
-    </div>
-  </div>
-</article>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              { 
+                link && (
+                  <LinkButton href={link}>
+                    <Link class="size-4" />
+                    Preview
+                  </LinkButton>
+                )
+              }
+              { 
+                repository && (
+                  <LinkButton href={repository}>
+                    <GitHub class="size-6" />
+                    Repository
+                  </LinkButton>
+                )
+              }
+            </footer>
+          </div>
+        </div>
+      </article>
     ))
   }
 </div>
