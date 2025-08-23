@@ -8,6 +8,7 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
-  site: 'https://porfolio.dev/',
+  site: 'https://victormos.dev/',
+  output: "server",
   adapter: cloudflare()
 })
