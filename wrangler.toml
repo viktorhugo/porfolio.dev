@@ -1,8 +1,0 @@
-name = "porfolio-dev"
-compatibility_date = "2025-08-23"
-
-[build]
-command = "npm run build"
-
-[vars]
-NODE_VERSION = "20"
