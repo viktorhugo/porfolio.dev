@@ -10,5 +10,7 @@ export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
   site: 'https://victormos.dev/',
   output: "server",
-  adapter: cloudflare()
+  adapter: cloudflare({
+    imageService: 'compile'
+  })
 })

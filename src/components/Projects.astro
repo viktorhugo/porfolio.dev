@@ -16,6 +16,7 @@ import Wagmi from "./icons/Wagmi.astro";
 import Rainbowkit from "./icons/Rainbowkit.astro";
 import React from "./icons/React.astro";
 import Wallet from "./icons/Wallet.astro";
+import Qrcode from "./icons/Qrcode.astro";
 
 const TAGS = {
   ANGULAR: {
@@ -52,6 +53,11 @@ const TAGS = {
     name: "Solana",
     class: "bg-[#14F195] text-black",
     icon: SolanaIcon
+  },
+  'SOLANA-PAY':{
+    name: "Solana Pay",
+    class: "bg-[#14F195] text-black",
+    icon: Qrcode
   },
   IONIC:{
     name: "Ionic",
@@ -117,7 +123,7 @@ const PROJECTS = [
       "Xaman Interactive xApp for betting, peer to peer on the XRPL blockchain, with a Telegram bot and MiniApp.",
     link: "https://p2pbet.app/",
     image: "/projects/p2pbet.webp",
-    tags: [TAGS.IONIC, TAGS.TELEGRAM, TAGS.NESTJS, TAGS.XRPL, TAGS.SOLANA],
+    tags: [TAGS.IONIC, TAGS.TELEGRAM, TAGS.NESTJS, TAGS.XRPL, TAGS.SOLANA, TAGS['SOLANA-PAY']],
   },
   {
     title: "CasinoCoin Lobby ",
