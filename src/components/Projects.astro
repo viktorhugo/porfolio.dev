@@ -17,6 +17,7 @@ import Rainbowkit from "./icons/Rainbowkit.astro";
 import React from "./icons/React.astro";
 import Wallet from "./icons/Wallet.astro";
 import Qrcode from "./icons/Qrcode.astro";
+import Default from "./icons/Default.astro";
 
 const TAGS = {
   ANGULAR: {
@@ -85,14 +86,14 @@ const TAGS = {
     icon: Rainbowkit
   },
   APPKIT:{
-    name: "Reown AppKit",
-    class: "bg-[#F8573B] text-white color-white",
-    icon: null
+    name: "AppKit",
+    class: "bg-[#F8573B] text-white ",
+    icon: Default
   },
   VIEM:{
     name: "Viem",
-    class: "bg-[#1F2837] text-white color-white",
-    icon: null
+    class: "bg-[#1F2837] text-white color-green-300",
+    icon: Default
   },
   REACT:{
     name: "React",
@@ -207,7 +208,7 @@ const PROJECTS = [
                 {tags.map((tag) => (
                   <li>
                     <span
-                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                      class={`flex gap-x-1 rounded-full text-xs ${tag.class} py-1 px-2 `}
                     >
                       {tag.icon && <tag.icon class="size-4" />}
                       {tag.name}
